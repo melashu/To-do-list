@@ -51,6 +51,7 @@ input[type="checkbox"] {
 }
 .fa-solid:hover{
   cursor:all-scroll;
+  border: 5px solid red;
 }
 
 .clean {
