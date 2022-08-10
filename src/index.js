@@ -1,32 +1,25 @@
 import "./style.css";
 
+class Task {
+  constructor(description, completed, index) {
+    this.description = description;
+    this.completed = completed;
+    this.index = index;
+  }
+}
+
 let toDoList = [
-  {
-    description: "Wash the disc",
-    completed: false,
-    index: 0,
-  },
-  {
-    description: "Read about JS",
-    completed: false,
-    index: 1,
-  },
-  {
-    description: "Walk with my girlfrind",
-    completed: false,
-    index: 2,
-  },
-  {
-    description: "do my to do list app",
-    completed: false,
-    index: 3,
-  },
+  new Task("Wash the disc", false, 0),
+  new Task("Read about JS", false, 1),
+  new Task("Walk with my girlfrind", false, 2),
+  new Task("do my to do list app", false, 3),
+  new Task("Read Book", false, 4),
 ];
 
 function displayTodoList() {
   let toDo = document.querySelector(".to-do-list");
   toDo.innerHTML = `<li><p class="todo-title">Todays To Do</p></li>
-            <li><input type="text" id="todo-box" placeholder="Add to your list"></li>`;
+            <li><input type="text" id="todo-box" placeholder="Add to your list..."></li>`;
   toDoList.forEach((task) => {
     let li = document.createElement("li");
     li.innerHTML = `
