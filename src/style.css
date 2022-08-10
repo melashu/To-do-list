@@ -58,20 +58,24 @@ input[type="checkbox"] {
   height: 20px;
   text-align: center;
 }
+
 .before {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
 .menu-icon {
   color: #3f3f3f;
   width: 20px;
   height: 20px;
 }
+
 .menu-icon:hover {
   cursor: all-scroll;
   color: #333;
 }
+
 .clean {
   text-decoration: none;
   display: inline-block;
