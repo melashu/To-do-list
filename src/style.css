@@ -44,20 +44,28 @@ input[type="checkbox"] {
   height: 20px;
   text-align: center;
 }
-.before{
+.before {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.fa-solid:hover{
-  cursor:all-scroll;
-  border: 5px solid red;
+.fa-solid{
+  color: #3f3f3f;
+  width: 20px;
+  height: 20px;
 }
-
+.fa-solid:hover {
+  cursor: all-scroll;
+  color: #333;
+}
 .clean {
+  text-decoration: none;
+  display: inline-block;
   padding: 15px;
   text-align: center;
   width: 100%;
+  box-sizing: border-box;
   border: none;
+  background-color: #f2f2f2;
   cursor: pointer;
 }
