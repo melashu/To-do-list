@@ -27,6 +27,20 @@ li {
   margin-right: 10px;
 }
 
+.top-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.enter-icon {
+  background-image: url("../img/enter.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+}
+
 .todo-title {
   font-weight: 800;
 }
@@ -49,12 +63,12 @@ input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
 }
-.fa-solid{
+.menu-icon {
   color: #3f3f3f;
   width: 20px;
   height: 20px;
 }
-.fa-solid:hover {
+.menu-icon:hover {
   cursor: all-scroll;
   color: #333;
 }
@@ -69,6 +83,6 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.clean:hover{
+.clean:hover {
   text-decoration: underline;
 }
