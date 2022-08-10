@@ -24,6 +24,7 @@ li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-right: 10px;
 }
 
 .todo-title {
@@ -39,10 +40,17 @@ input[type="text"] {
 
 input[type="checkbox"] {
   margin-right: 15px;
-  display: inline-block;
   width: 20px;
   height: 20px;
   text-align: center;
+}
+.before{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.fa-solid:hover{
+  cursor:all-scroll;
 }
 
 .clean {
