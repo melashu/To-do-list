@@ -2,11 +2,10 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: #f2f2f2;
 }
-
-
 
 .container {
   width: 50%;
@@ -14,9 +13,11 @@ body {
   box-shadow: 2px 5px 5px rgb(112, 109, 109);
   background-color: #fff;
 }
+
 ul {
   list-style: none;
 }
+
 li {
   padding: 16px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
@@ -25,8 +26,8 @@ li {
   align-items: center;
 }
 
-.todo-title{
-    font-weight: 800;
+.todo-title {
+  font-weight: 800;
 }
 
 input[type="text"] {
