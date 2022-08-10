@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/melashu/To-do-list#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
