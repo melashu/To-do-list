@@ -50,6 +50,7 @@ input[type="text"] {
   font-style: italic;
   width: 90%;
   border: none;
+  outline: none;
 }
 
 input[type="checkbox"] {
@@ -63,6 +64,12 @@ input[type="checkbox"] {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.after{
+  display: none;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .menu-icon {
