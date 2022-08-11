@@ -1,4 +1,4 @@
-export class TaskStorage {
+export default class TaskStorage {
   static getAllTask = () => {
     let tasks = [];
     if (localStorage.getItem("task") !== null) {
