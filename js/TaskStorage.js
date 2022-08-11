@@ -21,7 +21,7 @@ export class TaskStorage {
 
     let filteredID = [];
 
-    modifiedWords.forEach((el, i) => {
+    leftTask.forEach((el, i) => {
       el.index = i + 1;
       filteredID.push(el);
     });
@@ -29,7 +29,13 @@ export class TaskStorage {
     localStorage.setItem("task", JSON.stringify(filteredID));
   };
 
-    static updateTask = (desc, index) => {
-      
+  static updateTask = (desc, newIndex) => {
+    let tasks = this.getAllTask();
+    for (const task of tasks) {
+      if (task.index == newIndex) {
+        tasks[newIndex].description = desc;
+      }
+    }
+    localStorage.setItem("task", JSON.stringify(tasks));
   };
 }
