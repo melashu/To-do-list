@@ -1,41 +1,81 @@
 import './style.css';
+import TaskStorage from '../js/TaskStorage.js';
+import UI from '../js/UI.js';
 
-class Task {
-  constructor(description, completed, index) {
-    this.description = description;
-    this.completed = completed;
-    this.index = index;
-  }
-}
+UI.displayTodoList();
 
-const toDoList = [
-  new Task('Wash the disc', false, 0),
-  new Task('Read about JS', false, 1),
-  new Task('Walk with my girlfrind', false, 2),
-  new Task('do my to do list app', false, 3),
-  new Task('Read Book', false, 4),
-];
-
-function displayTodoList() {
-  const toDo = document.querySelector('.to-do-list');
-
-  toDo.innerHTML = `<li class="top-list"><p class="todo-title">Todays To Do</p><i class="fa-solid fa-arrows-rotate top-icon"></i></li>
-           <li class="top-list"> <input type="text" id="todo-box" placeholder="Add to your list..."><span class='enter-icon top-icon'></span></li>`;
-  toDoList.forEach((task, index) => {
-    const li = document.createElement('li');
-    li.className = 'list';
-    li.innerHTML = `
-           <input type="checkbox" class="complete" id="${index}">
-           <div class="before"> <h4>${task.description} </h4><i class="fa-solid fa-ellipsis-vertical menu-icon"></i></div>
-         `;
-
-    toDo.appendChild(li);
-  });
-}
-
-displayTodoList();
 const container = document.querySelectorAll('.list');
-
+const toDoList = TaskStorage.getAllTask();
 for (let i = 0; i < toDoList.length; i += 1) {
   container[i].firstElementChild.checked = toDoList[i].completed;
 }
+
+const toDo = document.querySelector('.form');
+toDo.addEventListener('change', () => {
+  const taskInput = document.getElementById('todo-box').value;
+  TaskStorage.addNewTask(taskInput);
+  window.location.reload();
+});
+
+const lists = document.querySelectorAll('.list');
+
+lists.forEach((list) => {
+  list.addEventListener('click', () => {
+    const form = list.children[1];
+    const inputBox = form.children[0];
+    const deleteIcon = form.children[1];
+    const menuIcon = form.children[2];
+    deleteIcon.style.display = 'block';
+    menuIcon.style.display = 'none';
+    list.style.backgroundColor = '#f2f2f2';
+    inputBox.style.backgroundColor = '#f2f2f2';
+  });
+});
+
+lists.forEach((list) => {
+  list.addEventListener('change', () => {
+    const form = list.children[1];
+    const inputBox = form.children[0];
+    const deleteIcon = form.children[1];
+    const menuIcon = form.children[2];
+    const hiddenInput = form.children[3];
+
+    deleteIcon.style.display = 'none';
+    menuIcon.style.display = 'block';
+
+    list.style.backgroundColor = '';
+    inputBox.style.backgroundColor = '';
+
+    if (inputBox.value !== hiddenInput.value) {
+      TaskStorage.updateTask(inputBox.value, Number(inputBox.id));
+    }
+  });
+});
+
+lists.forEach((list) => {
+  list.addEventListener('focusout', () => {
+    const form = list.children[1];
+    const inputBox = form.children[0];
+    const deleteIcon = form.children[1];
+    const menuIcon = form.children[2];
+
+    deleteIcon.style.display = 'none';
+    menuIcon.style.display = 'block';
+
+    list.style.backgroundColor = '';
+    inputBox.style.backgroundColor = '';
+  });
+});
+
+document.querySelectorAll('.delete-icon').forEach((del) => {
+  del.addEventListener('click', (e) => {
+    const li = e.target.parentElement.parentElement;
+    li.remove();
+    const index = e.target.id;
+    TaskStorage.deleteTask(index);
+  });
+});
+
+document.querySelector('.referesh').addEventListener('click', () => {
+  window.location.reload();
+});

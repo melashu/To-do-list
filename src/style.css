@@ -45,11 +45,21 @@ li {
   font-weight: 800;
 }
 
+.list {
+  margin: 0;
+  padding: 0 15px;
+  height: 3em;
+}
+
 input[type="text"] {
   padding: 8px;
-  font-style: italic;
   width: 90%;
   border: none;
+  outline: none;
+}
+
+.top-list input {
+  font-style: italic;
 }
 
 input[type="checkbox"] {
@@ -63,12 +73,30 @@ input[type="checkbox"] {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  height: 100%;
+}
+
+.task-editable {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.task-editable:focus {
+  padding: 0;
 }
 
 .menu-icon {
   color: #3f3f3f;
   width: 20px;
   height: 20px;
+}
+
+.delete-icon {
+  display: none;
 }
 
 .menu-icon:hover {
