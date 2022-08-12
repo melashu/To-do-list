@@ -6,7 +6,7 @@ export default class UI {
     const toDoList = TaskStorage.getAllTask();
     const toDo = document.querySelector(".to-do-list");
 
-    toDo.innerHTML = `<li class="top-list"><p class="todo-title">Todays To Do</p><i class="fa-solid fa-arrows-rotate top-icon"></i></li>
+    toDo.innerHTML = `<li class="top-list"><p class="todo-title">Todays To Do</p><i class="fa-solid fa-arrows-rotate top-icon referesh"></i></li>
            <li class="top-list"> <form class='form'><input type="text" required id="todo-box" placeholder="Add to your list..."></form><span class='enter-icon top-icon'></span></li>`;
 
     toDoList.forEach((task, index) => {
