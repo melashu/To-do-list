@@ -1,6 +1,6 @@
 import './style.css';
-import TaskStorage from '../js/TaskStorage.js';
-import UI from '../js/UI.js';
+import TaskStorage from '../module/TaskStorage.js';
+import UI from '../module/UI.js';
 
 UI.displayTodoList();
 
