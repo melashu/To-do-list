@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import TaskStorage from "./TaskStorage";
 
 export default class ManageTask {
@@ -51,15 +53,14 @@ export default class ManageTask {
       e.preventDefault();
       const allList = TaskStorage.getAllTask();
 
-        let leftTask = [];
-            leftTask= allList.filter((task) => !task.completed);
-      
+      let leftTask = [];
+      leftTask = allList.filter((task) => !task.completed);
 
       if (leftTask.length == allList.length) {
         alert("There is no compelted task!!");
       } else {
-          localStorage.setItem("task", JSON.stringify(leftTask));
-          window.location.reload();
+        localStorage.setItem("task", JSON.stringify(leftTask));
+        window.location.reload();
       }
     });
   }
