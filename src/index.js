@@ -14,8 +14,7 @@ const toDo = document.querySelector('.form');
 toDo.addEventListener('change', () => {
   const taskInput = document.getElementById('todo-box').value;
   TaskStorage.addNewTask(taskInput);
-    window.location.reload();
-
+  window.location.reload();
 });
 
 const lists = document.querySelectorAll('.list');
@@ -77,7 +76,6 @@ document.querySelectorAll('.delete-icon').forEach((del) => {
   });
 });
 
-
-document.querySelector(".referesh").addEventListener('click', () => {
+document.querySelector('.referesh').addEventListener('click', () => {
   window.location.reload();
 });
