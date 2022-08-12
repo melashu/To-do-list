@@ -1,14 +1,12 @@
 import './style.css';
-import TaskStorage from '../js/TaskStorage.js';
-import UI from '../js/UI.js';
+import TaskStorage from '../module/TaskStorage.js';
+import UI from '../module/UI.js';
+import ManageTask from '../module/ManageTask.js';
 
 UI.displayTodoList();
-
-const container = document.querySelectorAll('.list');
-const toDoList = TaskStorage.getAllTask();
-for (let i = 0; i < toDoList.length; i += 1) {
-  container[i].firstElementChild.checked = toDoList[i].completed;
-}
+ManageTask.fillCheckBox();
+ManageTask.addEventToCheckBox();
+ManageTask.cleanAll();
 
 const toDo = document.querySelector('.form');
 toDo.addEventListener('change', () => {
