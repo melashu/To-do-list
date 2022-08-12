@@ -5,7 +5,7 @@ export default class UI {
     const toDo = document.querySelector(".to-do-list");
 
     toDo.innerHTML = `<li class="top-list"><p class="todo-title">Todays To Do</p><i class="fa-solid fa-arrows-rotate top-icon"></i></li>
-           <li class="top-list"> <input type="text" id="todo-box" placeholder="Add to your list..."><span class='enter-icon top-icon'></span></li>`;
+           <li class="top-list"> <form class='form'><input type="text" required id="todo-box" placeholder="Add to your list..."></form><span class='enter-icon top-icon'></span></li>`;
 
     toDoList.forEach((task, index) => {
       this.addTaskToScreen(task, index);
@@ -17,13 +17,21 @@ export default class UI {
     const li = document.createElement("li");
     li.className = "list";
     li.innerHTML = `
-           <input type="checkbox" class="complete" id="${index + 1}">
-           <div class="before"> <h4>${
-             task.description
-           } </h4><i class="fa-solid fa-ellipsis-vertical menu-icon"></i></div>
-           <div class="after"> <input type='text' value="${
-             task.description
-           }"/> <i class="fa-solid fa-ellipsis-vertical menu-icon"></i></div>
+           <input type="checkbox" class="complete"">
+
+           <form class="before"> 
+           <input type='text' id="${index + 1}" value="${
+      task.description
+    }" class='task-editable'/>
+    <i class="fa-solid fa-trash-can  delete-icon" id="${index + 1}"></i> 
+    <i class="fa-solid fa-ellipsis-vertical menu-icon"></i>
+    <input type='hidden' value='${task.description}'/>
+
+    </form>
+
+           
+
+
            `;
 
     toDo.appendChild(li);
