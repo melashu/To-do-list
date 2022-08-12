@@ -1,3 +1,5 @@
+import Task from "../js/Task";
+import UI from "../js/UI";
 export default class TaskStorage {
   static getAllTask = () => {
     let tasks = [];
@@ -8,10 +10,14 @@ export default class TaskStorage {
     return tasks;
   };
 
-  static addNewTask = (task) => {
+  static addNewTask = (taskInput) => {
     let tasks = this.getAllTask();
+    let index = tasks.length + 1;
+    let task = new Task(taskInput, index);
     tasks.push(task);
+
     localStorage.setItem("task", JSON.stringify(tasks));
+    UI.addTaskToScreen(task, index);
   };
 
   static deleteTask = (index) => {
@@ -30,12 +36,16 @@ export default class TaskStorage {
   };
 
   static updateTask = (desc, newIndex) => {
+    let index = newIndex - 1;
     let tasks = this.getAllTask();
+
     for (const task of tasks) {
       if (task.index == newIndex) {
-        tasks[newIndex].description = desc;
+        tasks[index].description = desc;
       }
     }
+    console.log(tasks);
+
     localStorage.setItem("task", JSON.stringify(tasks));
   };
 }
