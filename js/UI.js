@@ -31,10 +31,7 @@ export default class UI {
 
     </form>
 
-           
-
-
-           `;
+                    `;
 
     toDo.appendChild(li);
   }
