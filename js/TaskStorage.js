@@ -1,5 +1,8 @@
-import Task from "../js/Task";
-import UI from "../js/UI";
+/* eslint-disable */
+
+import Task from "./Task.js";
+import UI from "./UI.js";
+
 export default class TaskStorage {
   static getAllTask = () => {
     let tasks = [];
@@ -11,9 +14,9 @@ export default class TaskStorage {
   };
 
   static addNewTask = (taskInput) => {
-    let tasks = this.getAllTask();
-    let index = tasks.length + 1;
-    let task = new Task(taskInput, index);
+    const tasks = this.getAllTask();
+    const index = tasks.length + 1;
+    const task = new Task(taskInput, index);
     tasks.push(task);
 
     localStorage.setItem("task", JSON.stringify(tasks));
@@ -21,31 +24,32 @@ export default class TaskStorage {
   };
 
   static deleteTask = (index) => {
-    let tasks = this.getAllTask();
+    const tasks = this.getAllTask();
 
-    let leftTask = tasks.filter((eachTask) => eachTask.index !== index);
+    const leftTask = tasks.filter((eachTask) => eachTask.index != index);
 
-    let filteredID = [];
-
+    const filteredID = [];
     leftTask.forEach((el, i) => {
       el.index = i + 1;
       filteredID.push(el);
     });
-
     localStorage.setItem("task", JSON.stringify(filteredID));
   };
 
   static updateTask = (desc, newIndex) => {
-    let index = newIndex - 1;
-    let tasks = this.getAllTask();
+    const index = newIndex - 1;
+    const tasks = this.getAllTask();
 
-    for (const task of tasks) {
+    tasks.forEach((task) => {
       if (task.index == newIndex) {
         tasks[index].description = desc;
       }
-    }
-    console.log(tasks);
-
+    });
+    // for (const task of tasks) {
+    //   if (task.index == newIndex) {
+    //     tasks[index].description = desc;
+    //   }
+    // }
     localStorage.setItem("task", JSON.stringify(tasks));
   };
 }

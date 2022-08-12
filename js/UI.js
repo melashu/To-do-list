@@ -1,7 +1,9 @@
+/* eslint-disable */
+
 import TaskStorage from "./TaskStorage.js";
 export default class UI {
   static displayTodoList() {
-    let toDoList = TaskStorage.getAllTask();
+    const toDoList = TaskStorage.getAllTask();
     const toDo = document.querySelector(".to-do-list");
 
     toDo.innerHTML = `<li class="top-list"><p class="todo-title">Todays To Do</p><i class="fa-solid fa-arrows-rotate top-icon"></i></li>
