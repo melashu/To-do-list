@@ -18,7 +18,6 @@ export default class TaskStorage {
     const index = tasks.length + 1;
     const task = new Task(taskInput, index);
     tasks.push(task);
-
     localStorage.setItem("task", JSON.stringify(tasks));
     UI.addTaskToScreen(task, index);
   };

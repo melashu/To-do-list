@@ -18,8 +18,8 @@ export default class UI {
     const toDo = document.querySelector(".to-do-list");
     const li = document.createElement("li");
     li.className = "list";
-    li.innerHTML = `
-           <input type="checkbox" class="complete"">
+    li.innerHTML = ` 
+           <input type="checkbox" class="complete" id="${index + 1}">
 
            <form class="before"> 
            <input type='text' id="${index + 1}" value="${
