@@ -76,3 +76,8 @@ document.querySelectorAll('.delete-icon').forEach((del) => {
     TaskStorage.deleteTask(index);
   });
 });
+
+
+document.querySelector(".referesh").addEventListener('click', () => {
+  window.location.reload();
+});
