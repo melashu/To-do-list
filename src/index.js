@@ -14,6 +14,8 @@ const toDo = document.querySelector('.form');
 toDo.addEventListener('change', () => {
   const taskInput = document.getElementById('todo-box').value;
   TaskStorage.addNewTask(taskInput);
+    window.location.reload();
+
 });
 
 const lists = document.querySelectorAll('.list');
