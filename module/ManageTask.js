@@ -30,6 +30,7 @@ export default class ManageTask {
               allList[index].completed = e.target.checked;
             }
           });
+// getSelection
           inputItem[index].style.textDecoration = "line-through";
           inputItem[index].setAttribute("readOnly", true);
           localStorage.setItem("task", JSON.stringify(allList));
