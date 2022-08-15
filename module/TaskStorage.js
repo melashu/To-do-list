@@ -24,9 +24,7 @@ export default class TaskStorage {
 
   static deleteTask = (index) => {
     const tasks = this.getAllTask();
-
     const leftTask = tasks.filter((eachTask) => eachTask.index != index);
-
     const filteredID = [];
     leftTask.forEach((el, i) => {
       el.index = i + 1;
@@ -35,20 +33,15 @@ export default class TaskStorage {
     localStorage.setItem("task", JSON.stringify(filteredID));
   };
 
+
   static updateTask = (desc, newIndex) => {
     const index = newIndex - 1;
     const tasks = this.getAllTask();
-
     tasks.forEach((task) => {
       if (task.index == newIndex) {
         tasks[index].description = desc;
       }
     });
-    // for (const task of tasks) {
-    //   if (task.index == newIndex) {
-    //     tasks[index].description = desc;
-    //   }
-    // }
     localStorage.setItem("task", JSON.stringify(tasks));
   };
 }
