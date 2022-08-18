@@ -28,7 +28,6 @@ export default class UI {
     <i class="fa-solid fa-trash-can  delete-icon" id="${index + 1}"></i> 
     <i class="fa-solid fa-ellipsis-vertical menu-icon"></i>
     <input type='hidden' value='${task.description}'/>
-
     </form>
 
                     `;
