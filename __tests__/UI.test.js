@@ -26,3 +26,24 @@ describe("Add Task to the task list", () => {
   });
 });
 
+describe("Remove task list", () => {
+  test("Remove Task", () => {
+    let removeTask = jest.fn(() => true);
+    document.body.innerHTML =
+      "<div>" + '<ul class="task-list"></ul>' + "</div>";
+    const list = document.querySelector(".task-list");
+    list.innerHTML = ` <li class="task"> <form class="before"> 
+           <input type='text' id="1" value="Read jest" class='task-editable'/>
+    <i class="fa-solid fa-trash-can  delete-icon" id="1"></i> 
+    <i class="fa-solid fa-ellipsis-vertical menu-icon"></i>
+    <input type='hidden' value='Read jest'/>
+    </form> </li>`;
+
+    const result = removeTask();
+    var newLi = document.getElementsByClassName("task-list");
+    newLi[0].remove();
+    expect(result).toBeTruthy();
+    expect(newLi.length).toBe(0);
+  });
+});
+
