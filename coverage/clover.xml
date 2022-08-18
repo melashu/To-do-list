@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660840497187" clover="3.2.0">
-  <project timestamp="1660840497188" name="All files">
+<coverage generated="1660844598822" clover="3.2.0">
+  <project timestamp="1660844598822" name="All files">
     <metrics statements="36" coveredstatements="4" conditionals="5" coveredconditionals="0" methods="11" coveredmethods="0" elements="52" coveredelements="4" complexity="0" loc="36" ncloc="36" packages="1" files="3" classes="3"/>
-    <file name="Task.js" path="B:\Mircovers\Microvers\All Projects\To-do-list\module\Task.js">
+    <file name="Task.js" path="C:\Users\GLOIRE MUFUNGIZI\Desktop\To-do-list\module\Task.js">
       <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="3" count="0" type="stmt"/>
       <line num="4" count="0" type="stmt"/>
       <line num="5" count="0" type="stmt"/>
     </file>
-    <file name="TaskStorage.js" path="B:\Mircovers\Microvers\All Projects\To-do-list\module\TaskStorage.js">
+    <file name="TaskStorage.js" path="C:\Users\GLOIRE MUFUNGIZI\Desktop\To-do-list\module\TaskStorage.js">
       <metrics statements="23" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
       <line num="7" count="1" type="cond" truecount="0" falsecount="2"/>
       <line num="9" count="1" type="stmt"/>
@@ -34,7 +34,7 @@
       <line num="34" count="0" type="stmt"/>
       <line num="37" count="0" type="stmt"/>
     </file>
-    <file name="UI.js" path="B:\Mircovers\Microvers\All Projects\To-do-list\module\UI.js">
+    <file name="UI.js" path="C:\Users\GLOIRE MUFUNGIZI\Desktop\To-do-list\module\UI.js">
       <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <line num="6" count="0" type="stmt"/>
       <line num="7" count="0" type="stmt"/>
