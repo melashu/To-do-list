@@ -1,7 +1,7 @@
-import TaskStorage from '../module/TaskStorage';
+import TaskStorage from '../module/TaskStorage.js';
 /* eslint-disable */
 
-jest.mock('../module/TaskStorage', () => class {
+jest.mock('../module/TaskStorage.js', () => class {
   addNewTask(val) {
     const collection = [];
     collection.push(val);

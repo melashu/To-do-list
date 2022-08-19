@@ -1,4 +1,4 @@
-import TaskStorage from "../module/TaskStorage";
+import TaskStorage from '../module/TaskStorage.js';
 /* eslint-disable */
 
 jest.mock(
