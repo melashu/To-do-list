@@ -51,3 +51,33 @@ describe("Test updateTask", () => {
   });
 });
 
+<<<<<<< HEAD
+=======
+describe("Update compelted Status", () => {
+  const taskStatus = jest.fn((status, index) => {
+    const collection = [
+      { description: "Read about JS Module", completed: false },
+      { description: "Cook breakfast", completed: false },
+    ];
+
+    collection[index].completed = status;
+    return collection[index].completed;
+  });
+
+  test("Compelete task at index 0", () => {
+    expect(taskStatus(true, 0)).toBeTruthy();
+  });
+
+  test("Compelete task at index 0", () => {
+    expect(taskStatus(false, 0)).toBeFalsy();
+  });
+
+  test("Compelete task at index 1", () => {
+    expect(taskStatus(true, 1)).toBeTruthy();
+  });
+    
+});
+
+
+
+>>>>>>> 9737839fef19fc56c6173f5e2cf91484bf996d71

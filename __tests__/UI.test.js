@@ -25,11 +25,21 @@ describe('Add Task to the task list', () => {
   });
 });
 
+<<<<<<< HEAD
+
+describe("Remove task list", () => {
+  test("Remove Task", () => {
+    let removeTask = jest.fn(() => true);
+    document.body.innerHTML =
+      "<div>" + '<ul class="task-list"></ul>' + "</div>";
+    const list = document.querySelector(".task-list");
+=======
 describe('Remove task list', () => {
   test('Remove Task', () => {
     const removeTask = jest.fn(() => true);
     document.body.innerHTML = '<div> <ul class="task-list"></ul> </div>';
     const list = document.querySelector('.task-list');
+>>>>>>> f430e5fdba3e5b275d984d3404853b64988fdbbb
     list.innerHTML = ` <li class="task"> <form class="before"> 
            <input type='text' id="1" value="Read jest" class='task-editable'/>
     <i class="fa-solid fa-trash-can  delete-icon" id="1"></i> 
@@ -38,8 +48,14 @@ describe('Remove task list', () => {
     </form> </li>`;
 
     const result = removeTask();
+<<<<<<< HEAD
+    var newLi = document.getElementsByClassName("task-list");
+    newLi[0].remove();
+    console.log(newLi)
+=======
     const newLi = document.getElementsByClassName('task-list');
     newLi[0].remove();
+>>>>>>> f430e5fdba3e5b275d984d3404853b64988fdbbb
     expect(result).toBeTruthy();
     expect(newLi.length).toBe(0);
   });
