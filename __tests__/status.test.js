@@ -51,8 +51,7 @@ describe("Test updateTask", () => {
   });
 });
 
-<<<<<<< HEAD
-=======
+
 describe("Update compelted Status", () => {
   const taskStatus = jest.fn((status, index) => {
     const collection = [
@@ -75,9 +74,11 @@ describe("Update compelted Status", () => {
   test("Compelete task at index 1", () => {
     expect(taskStatus(true, 1)).toBeTruthy();
   });
+
+   test("Compelete task at index 1", () => {
+     expect(taskStatus(false, 1)).toBeFalsy();
+   });
     
 });
 
 
-
->>>>>>> 9737839fef19fc56c6173f5e2cf91484bf996d71
