@@ -74,7 +74,39 @@ describe("Update compelted Status", () => {
     expect(taskStatus(true, 1)).toBeTruthy();
   });
     
+     test("Compelete task at index 1", () => {
+       expect(taskStatus(false, 1)).toBeFalsy();
+     });
 });
+
+describe("Clean All", () => {
+  const taskStatus = jest.fn((status) => {
+    let collection = [
+      { description: "Read about JS Module", completed: true },
+      { description: "Cook breakfast", completed: true },
+    ];
+    if (status) collection = [];
+    return collection;
+  });
+
+  test("Clean All Task", () => {
+    expect(taskStatus(true)).toEqual([]);
+  });
+
+  test("Unclean All Task", () => {
+    expect(taskStatus(false)).not.toEqual([]);
+  });
+
+  test("Unclean All Task", () => {
+       let collection = [
+         { description: "Read about JS Module", completed: true },
+         { description: "Cook breakfast", completed: true },
+       ];
+     expect(taskStatus(false)).toEqual(collection);
+   });
+});
+
+
 
 
 
