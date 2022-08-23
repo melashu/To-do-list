@@ -21,7 +21,7 @@
 
 # Demo Link
 
-**Coming soon**
+[Go Live](https://melashu.github.io/To-do-list/dist/)
 
 ## Getting Started
 
