@@ -1,5 +1,5 @@
-# Project Name
-**To-do-List**
+
+# **To-do-List**
 > This project is implemeted using ES6 feature and webpack
 
 # Objective of the project
@@ -21,7 +21,7 @@
 
 # Demo Link
 
-[Go Live](https://melashu.github.io/To-do-list/dist/)
+[Go Live](https://melashu.github.io/To-do-list)
 
 ## Getting Started
 
