@@ -32,7 +32,7 @@ Locate the index.html file and double click it to view webpage.
 
 ### Prerequisites
 
-- Install Node.js to use NPM package manager 
+- Install Node.js to use NPM package manager
 - Install webpack, webpack-dev-server
 - Install html-webpack-plugin 
 - Install CSS-loader and style loader 

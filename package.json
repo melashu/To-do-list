@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --mode development",
     "start": "webpack serve --open",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/melashu/To-do-list/issues"
   },
-  "homepage": "https://github.com/melashu/To-do-list#readme",
+  "homepage": "https://github.com/melashu/To-do-list",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -310,6 +311,7 @@
     "get-symbol-description": "^1.0.0",
     "get-uri": "^3.0.2",
     "getpass": "^0.1.7",
+    "gh-pages": "^4.0.0",
     "glob": "^7.2.3",
     "glob-parent": "^5.1.2",
     "glob-to-regexp": "^0.4.1",
