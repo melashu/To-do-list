@@ -1,6 +1,6 @@
 
 # **To-do-List**
-> This project is implemeted using ES6 feature and webpack
+This app is designed using JavaScript. It enables users to Add, Edit, and Delete their daily tasks. To add tasks user simply put texts and click submit button. To edit their task user simply need to double click the task list. To delete task user simply need to click delete button.
 
 # Objective of the project
 
